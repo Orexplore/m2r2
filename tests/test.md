@@ -8,4 +8,4 @@ __content__
 
 [A link to GitHub](http://github.com/)
 
-This is `$E = mc^2$` inline math.
+This is $`E = mc^2`$ inline math.
