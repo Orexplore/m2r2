@@ -268,6 +268,11 @@ class TestInlineMarkdown(RendererTestBase):
         out = self.conv(src)
         self.assertEqual(out, '\nthis is :math:`E = mc^2` inline math.\n')
 
+    def test_inline_math_twice(self):
+        src = 'this is $`E = mc^2`$ and $`a²+b²=c²`$ inline math.'
+        out = self.conv(src)
+        self.assertEqual(out, '\nthis is :math:`E = mc^2` and :math:`a²+b²=c²` inline math.\n')
+
     def test_disable_inline_math(self):
         src = 'this is $`E = mc^2`$ inline math.'
         out = self.conv(src, disable_inline_math=True)
